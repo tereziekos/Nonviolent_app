@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "final-project"
+version = "0.1.0"
+description = ""
+authors = ["Terezie Kosíková <89423234+tereziekos@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "final_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.1.7"
+black = "^23.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
