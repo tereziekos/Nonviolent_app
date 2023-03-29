@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feelings Inventory</title>
+</head>
+<body>
+	<ul>
+        {% for feeling in feelings %}
+            <li>{{ feeling.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

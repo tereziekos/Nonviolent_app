@@ -1,8 +1,14 @@
 from django.shortcuts import render
-
-# Create your views here.
+from .models import Feeling
 from django.http import HttpResponse
+from django.template import loader
 
 
-def index(request):
-    return HttpResponse("Hello, world. This is future NVC app.")
+
+def homepage(request):
+    return render(request, 'nvc/homepage.html')
+
+def feelings_inventory(request):
+    feelings = Feeling.objects.all()
+    inventory=  {'feelings': feelings}
+    return render(request,'nvc/feelings.html', inventory)
